@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinançasPrática | Alfabetização Financeira</title>
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importando fontes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">FinançasPrática</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#ferramentas">Calculadoras</a>
+            <a href="cursos.html">Cursos</a> <!-- Exemplo de outra página -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Educação Financeira Levada a Sério</h1>
+            <p>Transforme sua relação com o dinheiro através de ferramentas práticas e conhecimento direto.</p>
+        </section>
+
+        <div class="container">
+            <div class="grid" id="ferramentas">
+                
+                <!-- Calculadora -->
+                <div class="card">
+                    <h3>🧮 Simulador de Juros Compostos</h3>
+                    <div class="form-group">
+                        <label>Investimento Inicial (R$)</label>
+                        <input type="number" id="capital" value="1000">
+                    </div>
+                    <div class="form-group">
+                        <label>Aporte Mensal (R$)</label>
+                        <input type="number" id="aporte" value="200">
+                    </div>
+                    <div class="form-group">
+                        <label>Taxa Anual (%)</label>
+                        <input type="number" id="taxa" value="12">
+                    </div>
+                    <div class="form-group">
+                        <label>Tempo (Anos)</label>
+                        <input type="number" id="tempo" value="5">
+                    </div>
+                    <button class="btn" onclick="app.calcularJuros()">Calcular Futuro</button>
+                    
+                    <div id="resultado" class="result-box"></div>
+                </div>
+
+                <!-- Checklist Interativo -->
+                <div class="card">
+                    <h3>✅ Sua Jornada</h3>
+                    <p>Metas essenciais para sua saúde financeira:</p>
+                    <div id="checklist">
+                        <label class="task-item">
+                            <input type="checkbox" data-id="1"> Reserva de Emergência
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox" data-id="2"> Quitação de Dívidas
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox" data-id="3"> Conta em Corretora
+                        </label>
+                        <label class="task-item">
+                            <input type="checkbox" data-id="4"> Primeiro Investimento
+                        </label>
+                    </div>
+                    <div class="progress-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FinançasPrática. O conhecimento liberta.</p>
+    </footer>
+
+    <!-- Link para o JS externo -->
+    <script src="script.js"></script>
+</body>
+</html>
